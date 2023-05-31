@@ -1,0 +1,59 @@
+/* Podstawowy styl inputa */
+.label__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  max-width: 416px;
+  width: 100%;
+}
+
+.label-title {
+  padding-bottom: 8px;
+  display: block;
+  align-self: flex-start;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+}
+
+.input {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+.label__icon {
+  width: 20px;
+  height: 20px;
+
+  padding: 12px;
+}
+
+/* Hover */
+.label__container:hover > .label {
+  border: 1px solid rgba(17, 17, 17, 0.7);
+}
+
+/* Correct */
+
+.input:not(:placeholder-shown):valid + .label__icon {
+  background-image: url("./Vector.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input:not(:placeholder-shown):valid > .label-title {
+  color: green;
+}
+
+/* Error */
+.input:not(:placeholder-shown):invalid {
+  border-color: #fa0000cc;
+}
